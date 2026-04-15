@@ -7,8 +7,7 @@ Public Latin pronunciation lexicons in the [W3C Pronunciation Lexicon Specificat
 
 ## What this project is
 
-This repository collects pronunciation lexicons for Latin words and phrases using standards-compliant PLS XML files (`.pls`).  
-The main goal is to improve pronunciation quality in TTS engines that can consume external lexicons, such as Azure Speech.
+This repository collects pronunciation lexicons for Latin words and phrases using standards-compliant PLS XML files (`.pls`). The main goal is to improve pronunciation quality in TTS engines that can consume external lexicons, such as Azure Speech.
 
 ## Current status 🚧
 
@@ -20,17 +19,15 @@ This project is a work in progress.
 
 ## Why PLS 📘
 
-PLS provides a portable, structured way to define pronunciation entries (`lexeme` values with `grapheme` and `phoneme` forms).  
-By following the W3C specification, these lexicons are easier to reuse across tools and pipelines that support PLS.
+PLS provides a portable, structured way to define pronunciation entries (`lexeme` values with `grapheme` and `phoneme` forms). By following the W3C specification, these lexicons are easier to reuse across tools and pipelines that support PLS.
 
 ## Using these lexicons with Azure Speech 🔊
 
-Azure Speech supports referencing a public custom lexicon via SSML using the `<lexicon>` element.  
-Microsoft documents this here: [Pronunciation with SSML - custom lexicon examples](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-pronunciation#custom-lexicon-examples).
+Azure Speech supports referencing a public custom lexicon via SSML using the `<lexicon>` element. Microsoft documents this here: [Pronunciation with SSML - custom lexicon examples](https://learn.microsoft.com/en-us/azure/ai-services/speech-service/speech-synthesis-markup-pronunciation#custom-lexicon-examples).
 
 To use a lexicon from this repository:
 
-1. Host the `.pls` file at a publicly accessible URL (for example, GitHub raw URL, Blob storage, or another public endpoint).
+1. Host the `.pls` file at a publicly accessible URL (for example, GitHub raw URL, Blob storage, or another public endpoint) or just use the raw file URLs for the lexicon files in this repo (e.g., https://raw.githubusercontent.com/jmrog/latin-pls/refs/heads/main/lexicons/ecclesiastical.pls).
 2. Reference that URL in SSML with `<lexicon uri="..."/>`.
 
 Example:
